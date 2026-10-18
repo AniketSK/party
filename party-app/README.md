@@ -20,7 +20,10 @@ From top to bottom:
 - **Guest book.** A highlighted card listing every name entered on this phone, newest first.
   Tap a name to switch the ring to it. Entering an existing name again moves it to the front.
 
-The screen stays on while the app is in front (`FLAG_KEEP_SCREEN_ON`).
+The screen stays on while the app is in front (`FLAG_KEEP_SCREEN_ON`). It's portrait-only but
+flips upside down with the phone (`screenOrientation="sensorPortrait"`), so it reads correctly
+from either end, even with auto-rotate off. Rotation recreates the Activity; the ViewModel and
+its Bluetooth link carry on.
 
 ## Names become patterns
 
